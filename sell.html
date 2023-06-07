@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OLX - Buy</title>
+    <link rel="stylesheet" href="sell.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav__logo">
+            <svg viewBox="0 0 36.289 20.768" alt="Logo">
+                <path
+                    d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z">
+                </path>
+            </svg>
+        </div>
+    </nav>
+    <h1>POST YOUR AD</h1>
+    <div class="sell_container">
+        <div class="sell__inputs">
+            <h4>INCLUDE SOME DETAILS</h4>
+            <label for="name">Add Title</label>
+            <input id="name" type="text">
+            <label for="description">Description</label>
+            <textarea id="description" cols="30" rows="10"></textarea>
+            <label for="brand">Brand</label>
+            <input id="brand" type="text">
+            <div class="condition">
+                <label for="condition">Condition : </label>
+                <button>New</button>
+                <button>Used</button>
+            </div>
+            <hr />
+            <h4>SET A PRICE</h4>
+            <label for="price">Price</label>
+            <input id="price" type="text">
+            <hr>
+            <h4>Past Image Link</h4>
+            <label for="image">Link</label>
+            <input type="text" id="image">
+            <hr />
+            <h4>Your AD'S Location</h4>
+            <label for="location">location</label>
+            <input type="text" id="location">
+            <hr>
+            <h4>Review Your Account</h4>
+            <div class="profileName">
+                <img src="./images/avatar.png" alt="" width="70px">
+                <div class="input">
+                    <label for="ptofileName">Name</label>
+                    <input type="text" id="ptofileName">
+                </div>
+            </div>
+            <h4>Lets verify your Account</h4>
+            <label for="ptofilePhone">Mobile Phone Number</label>
+            <input type="text" id="ptofilePhone">
+            <h4>Want to Show Phone Number Write Yes or No</h4>
+            <label for="phoneYes">Yes Or No</label>
+            <input type="text" id="phoneYes">
+
+            <hr />
+        </div>
+
+        <button id="btnSubmit" onclick="addProduct()">Post Now</button>
+    </div>
+    <script>
+        document.getElementById("ptofileName").value = localStorage.getItem("name").toUpperCase()
+        document.getElementById("ptofilePhone").value = localStorage.getItem("phone").toUpperCase()
+        var btnsub = document.getElementById("btnSubmit");
+
+        function addProduct() {
+            var products = []
+
+            let obg = {
+                name: document.getElementById("name").value,
+                description: document.getElementById("description").value,
+                brands: document.getElementById("brand").value,
+                image: document.getElementById("image").value,
+                price: document.getElementById("price").value,
+                location: document.getElementById("location").value,
+                profileName: document.getElementById("ptofileName").value,
+                ptofilePhone: document.getElementById("ptofilePhone").value,
+                phoneShow: document.getElementById("phoneYes").value
+            }
+            products = JSON.parse(localStorage.getItem("products")) ? JSON.parse(localStorage.getItem(
+                "products")) : []
+            products.push(obg)
+            localStorage.setItem("products", JSON.stringify(products));
+
+            window.location.href = "./index.html"
+        }
+    </script>
+</body>
+
+</html>

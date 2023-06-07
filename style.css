@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto',
+        sans-serif;
+    list-style: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+b {
+    color: #3a77ff;
+}
+
+.hidden {
+    display: none !important;
+    transition: 1s !important;
+}
+
+.back_to_top h3 {
+    position: fixed;
+    top: 120px;
+    left: 600px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 190px;
+}
+
+.same__color {
+    background-color: #f7f8f8;
+    top: 0;
+    width: 100%;
+    z-index: 1990;
+    position: fixed;
+    width: 100%;
+}
+
+.small__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    height: 70px;
+}
+
+.small__navbar .small__navbar_logo {
+    fill: #3a77ff;
+    margin-right: 30px;
+}
+
+.second__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+}
+
+.second-navbar__logo svg {
+    width: 75px !important;
+}
+
+.second__navbar .select_option {
+    width: 300px;
+    padding: 10px 30px;
+    border: 2px solid #012f34;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.second__navbar .select_option input {
+    border: none;
+    background: none;
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+.second__navbar .select_option i {
+    font-size: 17px;
+}
+
+.second__navbar .search__bar {
+    width: 650px;
+    border: 2px solid #012f34;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px 30px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search__bar input {
+    border: none;
+    background: none;
+    font-size: 17px;
+    margin-left: 15px;
+    width: 90%;
+}
+
+.search__bar i {
+    background-color: #012f34;
+    padding: 12px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login__btn {
+    text-decoration: none;
+    color: #012f34;
+    font-size: 19px;
+    cursor: pointer;
+    border: 0;
+    border-bottom: 1px solid #012f34;
+    font-weight: 400;
+    background: none;
+}
+
+
+.login__btn :hover {
+    border-bottom: none;
+}
+
+.login__sell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    font-weight: 400;
+}
+
+.sell__btn {
+    background: url("https://olx.com.pk/assets/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 45px;
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #012f34;
+}
+
+.third__navbar {
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    padding: 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.select__itself {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.select__itself a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #012f34;
+}
+
+.select__itself i {
+    font-size: 20px;
+}
+
+.third__navbar .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links a {
+    color: #012f34;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.ad {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+}
+
+.ad img {
+    width: 1300px;
+}
+
+.fresh__recomandation {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30px;
+}
+
+.fresh__recomandation h1 {
+    font-weight: 400;
+    margin-left: 30px;
+}
+
+.cards__container {
+    margin-top: 20px;
+    width: 100%;
+    height: 68%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards__container .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 280px;
+    cursor: pointer;
+    border: 1px solid #012f3489;
+    border-radius: 3px;
+    height: auto;
+    margin: 20px;
+}
+
+.img__featured {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #012f34;
+}
+
+.img__featured img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.img__featured .featured {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    background-color: #ffce32;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.card__content {
+    border-left: 5px solid #ffce32;
+    width: 100%;
+    padding: 10px;
+}
+
+.name__heart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name__heart i {
+    cursor: pointer;
+}
+
+.name__heart h4 {
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.card__content h2 {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.card__content h5 {
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.card__content-gap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.load__more {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.load__more-btn {
+    background: none;
+    color: #012f34;
+    border: 2px solid #012f34;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.load__more-btn:hover {
+    border: 3px solid #012f34;
+}
+
+footer {
+    margin-top: 100px;
+}
+
+.footer_the_olx_app_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 47, 52, .03);
+}
+
+.footer_the_olx_app_section .footer_olx_content {
+    width: 400px;
+}
+
+.footer_olx_content h1 {
+    font-weight: 500;
+}
+
+.footer_olx_content h3 {
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.get__your_app_today {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 450px;
+}
+
+.apps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.get__your_app_today h4 {
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.apps img {
+    width: 120px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.line {
+    border-left: 1px solid rgba(0, 47, 52, .2);
+    height: 8.6rem;
+    width: .2rem;
+}
+
+.footer__content {
+    background-color: rgba(0, 47, 52, .03);
+    width: 100%;
+    height: 180px;
+    border-top: 1px solid #012f34;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.footer__content .lists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__bottom {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #012f34;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.footer__content ul {
+    margin-left: 40px;
+}
+
+.footer__content ul h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer__content ul li {
+    color: rgba(0, 47, 52, .64);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icons i {
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid #012f34;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.login,
+.login_email,
+.login_phone,
+.signUp {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.login_form,
+.email_login,
+.phone_login,
+.signUp_account {
+    background-color: #fff;
+    width: 400px;
+    height: auto;
+    padding: 25px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.login_form h1 {
+    margin: 15px 10px 10px 10px;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+.login_form h2 {
+    margin: 10px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.login_form button {
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #012f34;
+    border: 2px solid #012f34;
+    width: 80%;
+    display: flex;
+    background: none;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 17px;
+    margin: 10px;
+    text-align: left;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login_form button img {
+    width: 27px;
+    text-align: left;
+    margin-right: 35px !important;
+}
+
+.login_form button:hover {
+    border: 3px solid #012f34;
+}
+
+.login_form p {
+    font-size: 14px;
+    text-align: center;
+    width: 210px;
+    margin-top: 20px;
+}
+
+.close__btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.icons_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.icons_flex i {
+    font-size: 30px;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.icons_flex i:first-child {
+    margin-top: -20px;
+}
+
+.email_login h3 {
+    margin: 15px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.email_login input {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #012f34;
+    border-radius: 5px;
+    color: #012f34;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 17px;
+}
+
+.email_login button {
+    background-color: #012f34;
+    padding: 10px 30px;
+    width: 80%;
+    color: #fff;
+    border: 1px solid #012f34;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email_login p {
+    font-size: 12px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.phone_login h3 {
+    margin: 15px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.phone_login input {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #012f34;
+    border-radius: 5px;
+    color: #012f34;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 17px;
+}
+
+.phone_login button {
+    background-color: #012f34;
+    padding: 10px 30px;
+    width: 80%;
+    color: #fff;
+    border: 1px solid #012f34;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.phone_login p {
+    font-size: 12px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+}
+
+.signUp h3 {
+    margin: 15px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.signUp p {
+    font-size: 12px;
+    margin: 20px;
+    text-align: center;
+    width: 250px;
+
+}
+
+.signUp button {
+    background-color: #012f34;
+    padding: 10px 30px;
+    width: 80%;
+    color: #fff;
+    border: 1px solid #012f34;
+    font-size: 17px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signUp input {
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #012f34;
+    border-radius: 5px;
+    color: #012f34;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 17px;
+}
+
+.avatar {
+    cursor: pointer;
+}
+
+
+.productDetails {
+    width: 100%;
+    height: 130vh;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.left__side {
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.left__side img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.left__side .price__location_card,
+.description {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: 1px solid #012f34;
+    border-radius: 6px;
+}
+
+.left__side .price__location_card h1,
+h3,
+p {
+    margin: 10px;
+}
+
+.left__side .description h1,
+h3,
+p {
+    margin: 10px;
+}
+
+.price__location_card h1 {
+    font-size: 38px;
+}
+
+.price__location_card h3 {
+    font-size: 23px;
+}
+
+.price__location_card p i {
+    margin-right: 10px;
+}
+
+.right__side {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: auto;
+}
+
+.right__side img {
+    width: 100px;
+}
+
+.profile_contact_card {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    width: 100%;
+    height: 190px;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #012f34;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+
+ .avaar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+}
+
+.img h5 {
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.right__side button {
+    padding: 10px 30px;
+    width: 100%;
+    border: 1px solid #012f34;
+    background: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
