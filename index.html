@@ -332,7 +332,7 @@
         localStorage.setItem("price" , data[index].price)
         localStorage.setItem("location" , data[index].location)
         localStorage.setItem("phone" , data[index].profilePhone)
-        window.location.href = "./productdetails.html"
+        window.location.href = "./productDetails.html"
     }
 
     function openLogin() {
@@ -424,7 +424,7 @@
                 localStorage.setItem("name", users[i].name);
                 localStorage.setItem("email", email);
                 localStorage.setItem("phone", users[i].phone);
-                localStorage.setItem("gender", users[i].gender);
+                localStorage.setItem("phone", users[i].phone);
                 localStorage.setItem("isAuthenticated", users[i].isAuthenticated);
                 window.location.reload()
                 if (flage == false) {
