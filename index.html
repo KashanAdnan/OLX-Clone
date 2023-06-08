@@ -312,7 +312,7 @@
         window.location.href = "./profile.html"
     }
     showData()
-    var data = JSON.parse(localStorage.getItem("products"))
+    var data = JSON.parse(localStorage.getItem("products")) || []
     data.map((card, index) => {
         document.getElementById("cards").innerHTML += `
                    <div onclick="productDetail(${index})" class="card">
