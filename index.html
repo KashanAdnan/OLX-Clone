@@ -141,8 +141,8 @@
                 <input type="text" placeholder="Jamshed Town, Karachi">
             </div>
             <div class="search__bar">
-                <input type="text" placeholder="Find Cars, Mobile Phones and more...">
-                <i class="fa-solid fa-search"></i>
+                <input type="text"  id="txt" placeholder="Find Cars, Mobile Phones and more...">
+                <i class="fa-solid fa-search" onclick="search()"></i>
             </div>
             <div class="login__sell" id="login__sell">
                 <button href="" class="login__btn" onclick="openLogin()">Login</button>
@@ -152,16 +152,10 @@
     </div>
     <div class="third__navbar">
         <div class="select__itself">
-            <a href="">All category <i class="fa-solid fa-angle-down"></i></a>
+            <a href="">All category</a>
         </div>
-        <div class="links">
-            <a href="#">Mobile Phones</a>
-            <a href="#">Cars</a>
-            <a href="#">Motercycles</a>
-            <a href="#">House</a>
-            <a href="#">TV - Video - Audio</a>
-            <a href="#">Tablets</a>
-            <a href="#">Land & Plots</a>
+        <div class="links" id="links">
+
         </div>
     </div>
     <div class="ad">
@@ -266,6 +260,56 @@
     </footer>
 </body>
 <script>
+    var categories = [
+        "Mobile Phones",
+        "Cars",
+        "Motercycles",
+        "House",
+        "Tv - Video - Audio",
+        "Tablets",
+        "Land & Ports"
+    ]
+
+    categories.map((data) => {
+        document.getElementById("links").innerHTML += `
+        <button onclick="categorySet(this)">${data}</button>
+        `
+    })
+
+    function search() {
+        var flage = false
+        var data = JSON.parse(localStorage.getItem("products"))
+        var txt = document.getElementById("txt").value;
+        for (let i = 0; i < data.length; i++) {
+            if (data[i].name === txt) {
+                console.log(data[i].name === txt);
+                console.log(txt);
+                flage =true
+                  document.getElementById("cards").innerHTML += `
+                  <div onclick="productDetail(${index})" class="card">
+                      <div class="img__featured">
+                          <img src="${data[i].image}" alt="">
+                          <p class="featured">featured</p>
+                      </div>
+                      <div class="card__content">
+                          <div class="card__content-gap">
+                              <div class="name__heart">
+                                  <h4>${data[i].name}</h4>
+                                  <i class="fa-solid fa-heart"></i>
+                              </div>
+                              <h2>Rs ${data[i].price}</h2>
+                          </div>
+                          <h5>${data[i].location}</h5>
+                      </div>
+                  </div>
+                  `
+            }
+        }
+        if (flage === false) {
+            alert("Not Exits")
+        }
+    }
+
     function showData() {
         var data = JSON.parse(localStorage.getItem("users"))
         var email = localStorage.getItem("email")
@@ -301,7 +345,7 @@
     }
     showData()
     var data = JSON.parse(localStorage.getItem("products"))
-    data.map((card , index) => {
+    data.map((card, index) => {
         document.getElementById("cards").innerHTML += `
                    <div onclick="productDetail(${index})" class="card">
                        <div class="img__featured">
@@ -325,13 +369,13 @@
 
     function productDetail(index) {
         console.log(data);
-        localStorage.setItem("productName" , data[index].name)
-        localStorage.setItem("name" , data[index].profileName)
-        localStorage.setItem("description" , data[index].description)
-        localStorage.setItem("image" , data[index].image)
-        localStorage.setItem("price" , data[index].price)
-        localStorage.setItem("location" , data[index].location)
-        localStorage.setItem("phone" , data[index].profilePhone)
+        localStorage.setItem("productName", data[index].name)
+        localStorage.setItem("name", data[index].profileName)
+        localStorage.setItem("description", data[index].description)
+        localStorage.setItem("image", data[index].image)
+        localStorage.setItem("price", data[index].price)
+        localStorage.setItem("location", data[index].location)
+        localStorage.setItem("phone", data[index].profilePhone)
         window.location.href = "./productDetails.html"
     }
 

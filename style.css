@@ -178,10 +178,22 @@ b {
     margin-right: 20px;
 }
 
-.select__itself a {
+.links button {
     font-size: 17px;
+    border: 0;
+    background: none;
     text-decoration: none;
     color: #012f34;
+    margin-right: 10px;
+}
+
+.select__itself a {
+    font-size: 17px;
+    border: 0;
+    background: none;
+    text-decoration: none;
+    color: #012f34;
+    margin-right: 10px;
 }
 
 .select__itself i {
@@ -216,7 +228,7 @@ b {
 
 .fresh__recomandation {
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin-top: 30px;
 }
 
@@ -250,6 +262,7 @@ b {
 
 .img__featured {
     width: 100%;
+    border-bottom: 1px solid #012f34;
     height: 200px;
     overflow: hidden;
     position: relative;
@@ -262,12 +275,13 @@ b {
 .img__featured img {
     width: 100%;
     object-fit: cover;
+    height: 100%;
 }
 
 .img__featured .featured {
     position: absolute;
-    bottom: 20px;
-    left: 10px;
+    bottom: 7px;
+    left: 4px;
     background-color: #ffce32;
     text-transform: uppercase;
     padding: 5px;
@@ -759,7 +773,7 @@ p {
     justify-content: space-between;
 }
 
- .avaar {
+.avaar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -780,3 +794,4 @@ p {
     margin-top: 10px;
     cursor: pointer;
 }
+
