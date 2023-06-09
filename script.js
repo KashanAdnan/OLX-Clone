@@ -4,7 +4,7 @@ if (phone === "no") {
 } else {
   document.getElementById("phoneL").innerHTML = localStorage.getItem("phone");
 }
-document.getElementById("name").innerHTML = localStorage.getItem("name");
+document.getElementById("nameL").innerHTML = localStorage.getItem("name");
 document.getElementById("description").innerHTML =
   localStorage.getItem("description");
 document.getElementById("description2").innerHTML =
